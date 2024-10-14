@@ -28,7 +28,7 @@ Original Query: ```{question}```
 (NO CODE) Preprocessed Query:""")
 
 
-dfa_rag_prompt = PromptTemplate.from_template("""
+dti_rag_prompt = PromptTemplate.from_template("""
 You are a polite assistant for the Department of Foreign Affairs.
                                               
 I need you to address the question based ONLY on the possibly relevant context was retrieved here: 
