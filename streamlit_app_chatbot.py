@@ -9,9 +9,9 @@ col1, col2 = st.columns([3.5, 1])  # Adjust the ratio as needed
 
 # Title in the first column
 with col1:
-    st.title("📄 DFA Q&A")
+    st.title("📄 DTI Chatbot Proof of Concept")
     st.write(
-        "This app answers questions based on FAQs found [here](https://consular.dfa.gov.ph/faqs-menu?). "
+        "This app answers questions based on FAQs found [here](https://podrs.dti.gov.ph/#/user-control/user-faqs). "
     )
 # Logo and "Developed by CAIR" text in the second column
 with col2:
