@@ -49,7 +49,7 @@ Answer:
 # rag_prompt1 = PromptTemplate.from_template(template="{question}"])
 
 
-prompt2 = PromptTemplate.from_template("""
+query_extract_prompt = PromptTemplate.from_template("""
 I want to preprocess a query so that it contains only necessary information only. 
 Remove any Personal Identifiable Information (PII) such as Name, Birthdays, or Passport Numbers.
 If in another language, Translate to English.
