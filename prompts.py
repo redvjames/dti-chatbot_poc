@@ -29,7 +29,7 @@ Original Query: ```{question}```
 
 
 dti_rag_prompt = PromptTemplate.from_template("""
-You are a polite assistant for the Department of Foreign Affairs.
+You are a polite assistant for the Department of Trade and Industry.
                                               
 I need you to address the question based ONLY on the possibly relevant context was retrieved here: 
 [Start of Context FAQs]{context}[End of Context FAQs] ([FAQ] is just a separator) 
