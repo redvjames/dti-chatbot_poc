@@ -9,7 +9,7 @@ col1, col2 = st.columns([3.5, 1])  # Adjust the ratio as needed
 
 # Title in the first column
 with col1:
-    st.title("📄 DTI Chatbot Proof of Concept")
+    st.title("📄 DTI Chatbot POC")
     st.write(
         "This app answers questions based on FAQs found [here](https://podrs.dti.gov.ph/#/user-control/user-faqs). "
     )
