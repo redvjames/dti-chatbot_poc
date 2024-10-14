@@ -63,7 +63,7 @@ from langchain_core.runnables import RunnablePassthrough, RunnableAssign
 from dotenv import load_dotenv
 load_dotenv()
 
-from prompts import prompt2, dti_rag_prompt
+from prompts import query_extract_prompt, dti_rag_prompt
 
 llm = HuggingFaceEndpoint(repo_id=repo_id, temperature=0.1)
 
@@ -77,7 +77,7 @@ retriever =  db.as_retriever(search_kwargs={'k': n_retrieved_docs})
 def format_docs(docs):
     return f"\n\n".join(f"[FAQ]" + doc.page_content.replace("\n", " ") for n, doc in enumerate(docs, start=1))
 
-chain = prompt2 | llm | {"context": retriever | format_docs, "question": RunnablePassthrough()} | dti_rag_prompt | llm
+chain = query_extract_prompt | llm | {"context": retriever | format_docs, "question": RunnablePassthrough()} | dti_rag_prompt | llm
 
 # React to user input
 if prompt := st.chat_input("What is up?"):
